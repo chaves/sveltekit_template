@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.drop-down-menu {
+		@apply absolute left-0 bg-white rounded-lg shadow-sm w-max mt-14 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:mt-4 transition-all duration-500 py-4 border border-blueGray-200;
+	}
+}
+
+
+/*CUSTOM CSS*/
+:root {
+	--tw-text-opacity: 1;
+	--tw-divide-opacity: 1;
+	--tw-border-opacity: 1;
+}
+/*Common*/
+button:focus {
+	border: 0;
+	outline: none !important;
+}
+
+.max-h-0 {
+	max-height: 0;
+}
+
+img {
+	z-index: 2;
+}
+
+/*Dropdown Menu*/
+nav li.has-child {
+	position: relative;
+	padding-right: 10px;
+}
+
+nav li.has-child::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 4px;
+	height: 4px;
+	border-radius: 10px;
+	background-color: rgba(148, 163, 184, var(--tw-text-opacity));
+}
+
+.menu-item {
+	--tw-border-opacity: 1;
+	border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+	border-bottom-width: 4px;
+	display: inline-block;
+	padding: 1.25rem;
+}
+
+.menu-item:hover {
+	--tw-border-opacity: 1;
+	border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+}
+
+/*HEADER*/
+.sticky-bar {
+	position: relative;
+	z-index: 3;
+}
+
+.sticky-bar.stick {
+	-webkit-animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+	animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+	-webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	left: 0;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	background: #fff;
+	margin-top: 0 !important;
+}
+
+.header-4.stick a.text-white {
+	color: rgba(71, 85, 105, var(--tw-text-opacity)) !important;
+}
+
+.header-4.stick .logo-dark {
+	display: block;
+}
+
+.header-4.stick .logo-light {
+	display: none;
+}
+
+.bg-blueGray-150 {
+	background-color: #eff3f9;
+}

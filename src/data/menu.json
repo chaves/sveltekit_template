@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Home",
+        "path": "/",
+        "title": "link",
+        "path": "/path",
+        "children": [
+            {
+                "title": "Sub",
+                "path": "/path/sub"
+            }
+        ]
+    }
+]
